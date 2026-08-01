@@ -1,0 +1,6 @@
+{
+  "name": "Sunil Paudel Portfolio",
+  "description": "Portfolio website of Sunil Paudel, a registered Civil Engineer specializing in structural analysis, bridge design, and resilient infrastructure.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
