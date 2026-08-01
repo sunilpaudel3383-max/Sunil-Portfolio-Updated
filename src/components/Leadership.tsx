@@ -29,11 +29,16 @@ export default function Leadership() {
 
         <div ref={containerRef} className="relative">
           {/* Track + animated progress line */}
-          <div className="absolute left-[11px] top-0 h-full w-px -translate-x-1/2 bg-slate-300 dark:bg-white/10 md:left-1/2" />
-          <motion.div
-            style={{ scaleY: lineScale }}
-            className="absolute left-[11px] top-0 h-full w-px -translate-x-1/2 origin-top bg-gradient-to-b from-sky-600 to-sky-400 dark:from-white dark:to-white/40 md:left-1/2"
-          />
+         <div className="absolute left-[11px] top-0 h-full w-px -translate-x-1/2 bg-slate-300 dark:bg-white/10 md:left-1/2" />
+      <motion.div
+        style={{ scaleY: lineScale }}
+            className="absolute left-[11px] top-0 h-full w-px -translate-x-1/2
+                      origin-top
+                      bg-gradient-to-b
+                      from-sky-600 to-sky-400
+                      dark:from-sky-300 dark:to-sky-500
+                      md:left-1/2"
+/>  
 
           <div className="space-y-10 md:space-y-2">
             {leadership.map((item, i) => {

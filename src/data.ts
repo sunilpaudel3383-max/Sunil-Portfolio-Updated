@@ -167,9 +167,9 @@ export const skills = {
     'Adaptability',
   ],
   Languages: [
-    'Nepali — Native',
-    'English — Fluent',
-    'Hindi — Conversational',
+    'Nepali',
+    'English',
+    'Hindi',
   ],
 }
 
