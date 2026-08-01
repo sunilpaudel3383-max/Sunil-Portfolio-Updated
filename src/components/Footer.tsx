@@ -17,7 +17,15 @@ export default function Footer() {
           ))}
         </div>
         <span className="text-sm text-slate-500 dark:text-gray-500">
-          © {new Date().getFullYear()} Sudin Shrestha
+         © {new Date().getFullYear()}{' '}
+<a
+  href="https://sudinshrestha.name.np"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="text-sky-600 hover:text-sky-500 transition-colors dark:text-sky-400 dark:hover:text-sky-300"
+>
+  Sudin Shrestha
+</a>
         </span>
       </div>
     </footer>

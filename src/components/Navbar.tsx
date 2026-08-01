@@ -23,7 +23,7 @@ export default function Navbar() {
     >
       <nav className="liquid-glass mx-auto flex max-w-7xl items-center justify-between rounded-xl px-4 py-2">
         <a href="#top" className="text-xl font-semibold tracking-tight transition-colors">
-          {profile.name}
+         ✦ {profile.name}
         </a>
 
         <div className="hidden items-center gap-6 lg:gap-8 md:flex">
