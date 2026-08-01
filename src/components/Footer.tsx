@@ -17,7 +17,7 @@ export default function Footer() {
           ))}
         </div>
         <span className="text-sm text-slate-500 dark:text-gray-500">
-          © {new Date().getFullYear()} {profile.name}
+          © {new Date().getFullYear()} Sudin Shrestha
         </span>
       </div>
     </footer>
