@@ -9,6 +9,7 @@ import {
   ImageIcon,
 } from 'lucide-react'
 import Reveal from './Reveal'
+import ProtectedImage from './ProtectedImage'
 import { projects, ProjectItem, ProjectImage } from '../data'
 
 function ProjectCardGallery({ images }: { images: ProjectImage[] }) {
@@ -55,7 +56,7 @@ function ProjectCardGallery({ images }: { images: ProjectImage[] }) {
             className="absolute inset-0 flex h-full w-full items-center justify-center"
           >
             {/* Soft Ambient Blurred Background Fill */}
-            <img
+            <ProtectedImage
               src={currentImage.url}
               alt=""
               aria-hidden="true"
@@ -66,11 +67,9 @@ function ProjectCardGallery({ images }: { images: ProjectImage[] }) {
             <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-slate-950/40 pointer-events-none" />
 
             {/* 100% Fully Visible Uncropped Image */}
-            <img
+            <ProtectedImage
               src={currentImage.url}
               alt={currentImage.alt}
-              loading="lazy"
-              referrerPolicy="no-referrer"
               className="relative z-0 h-full w-full object-contain p-4 pb-16 md:p-6 md:pb-20 drop-shadow-2xl"
             />
           </motion.div>
@@ -181,10 +180,9 @@ function ProjectCardGallery({ images }: { images: ProjectImage[] }) {
               >
                 <X size={20} />
               </button>
-              <img
+              <ProtectedImage
                 src={lightboxImg.url}
                 alt={lightboxImg.alt}
-                referrerPolicy="no-referrer"
                 className="max-h-[78vh] w-full rounded-xl object-contain"
               />
               <div className="p-4 text-center">

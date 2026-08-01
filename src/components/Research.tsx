@@ -1,6 +1,7 @@
 import { ExternalLink } from 'lucide-react'
 import Section from './Section'
 import Reveal from './Reveal'
+import ProtectedImage from './ProtectedImage'
 import { publications } from '../data'
 
 export default function Research() {
@@ -16,10 +17,9 @@ export default function Research() {
             <article className="liquid-glass group flex h-full flex-col overflow-hidden rounded-2xl border border-slate-300/70 dark:border-white/20">
               {/* Image placeholder */}
               <div className="relative aspect-[4/5] overflow-hidden bg-slate-100 dark:bg-black">
-                <img
+                <ProtectedImage
                   src={pub.image}
                   alt={pub.title}
-                  loading="lazy"
                   className="h-full w-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
                 />
                 <span className="absolute left-3 top-3 rounded-full border border-slate-200 bg-white/80 px-3 py-1 text-xs text-slate-800 backdrop-blur-sm dark:border-white/20 dark:bg-black/60 dark:text-gray-200">

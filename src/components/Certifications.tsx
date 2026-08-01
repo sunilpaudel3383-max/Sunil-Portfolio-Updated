@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { ChevronLeft, ChevronRight, Pause, Play, Maximize2, X, Award } from 'lucide-react'
 import Section from './Section'
 import Reveal from './Reveal'
+import ProtectedImage from './ProtectedImage'
 import { certificatesData, Certificate } from '../data'
 
 export default function Certifications() {
@@ -91,10 +92,9 @@ export default function Certifications() {
                   transition={{ duration: 0.35, ease: 'easeInOut' }}
                   className="group relative aspect-[16/10] w-full overflow-hidden"
                 >
-                  <img
+                  <ProtectedImage
                     src={items[currentIndex].image}
                     alt={items[currentIndex].title}
-                    referrerPolicy="no-referrer"
                     className="h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent opacity-0 transition-opacity group-hover:opacity-100" />
@@ -181,10 +181,9 @@ export default function Certifications() {
               >
                 <X size={20} />
               </button>
-              <img
+              <ProtectedImage
                 src={selectedImage.image}
                 alt={selectedImage.title}
-                referrerPolicy="no-referrer"
                 className="max-h-[75vh] w-full rounded-xl object-contain"
               />
               <div className="p-4 text-center">

@@ -11,6 +11,7 @@ import {
 import { motion, AnimatePresence } from 'framer-motion'
 import Section from './Section'
 import Reveal from './Reveal'
+import ProtectedImage from './ProtectedImage'
 import { trainingsAndWorkshops } from '../data'
 
 type UploadedFilesState = Record<string, { name: string; url?: string }>
@@ -158,7 +159,7 @@ export default function Trainings() {
           <Reveal delay={100}>
             <div className="flex items-center justify-between border-b border-slate-200 dark:border-white/10 pb-4">
               <div className="flex items-center gap-3">
-                <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-amber-500/10 text-amber-600 dark:text-amber-400">
+                <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-sky-500/10 text-sky-600 dark:text-sky-400">
                   <Users size={18} />
                 </span>
                 <h3 className="text-xl font-medium tracking-tight text-slate-900 dark:text-white">
@@ -190,7 +191,7 @@ export default function Trainings() {
                   </div>
 
                   <div className="mt-4 flex items-center border-t border-slate-200/80 dark:border-white/10 pt-3">
-                    <span className="inline-flex items-center rounded-full bg-amber-500/10 border border-amber-500/20 px-3 py-1 text-xs font-medium text-amber-700 dark:text-amber-300">
+                    <span className="inline-flex items-center rounded-full bg-sky-500/10 border border-sky-500/20 px-3 py-1 text-xs font-medium text-sky-700 dark:text-sky-300">
                       Role: {item.role}
                     </span>
                   </div>
@@ -229,10 +230,9 @@ export default function Trainings() {
                 </button>
               </div>
               <div className="flex items-center justify-center max-h-[75vh] overflow-auto">
-                <img
+                <ProtectedImage
                   src={selectedCert.url}
                   alt={selectedCert.title}
-                  referrerPolicy="no-referrer"
                   className="max-h-[72vh] w-auto max-w-full rounded-xl object-contain shadow-md"
                 />
               </div>

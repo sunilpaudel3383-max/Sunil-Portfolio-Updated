@@ -11,10 +11,12 @@ import Leadership from './components/Leadership'
 import Certifications from './components/Certifications'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
+import ProtectionGuard from './components/ProtectionGuard'
 
 export default function App() {
   return (
     <ThemeProvider>
+      <ProtectionGuard />
       <div className="min-h-screen bg-white text-slate-900 transition-colors duration-300 dark:bg-black dark:text-white">
         <Navbar />
         <Hero />

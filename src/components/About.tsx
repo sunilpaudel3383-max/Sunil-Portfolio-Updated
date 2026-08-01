@@ -1,5 +1,6 @@
 import { GraduationCap, MapPin, BadgeCheck, Sparkles } from 'lucide-react'
 import Reveal from './Reveal'
+import ProtectedImage from './ProtectedImage'
 import { profile, stats, education } from '../data'
 
 export default function About() {
@@ -22,10 +23,9 @@ export default function About() {
           {/* Photo */}
           <Reveal className="lg:col-span-2">
             <div className="liquid-glass group relative overflow-hidden rounded-2xl border border-slate-300/80 shadow-lg dark:border-white/20">
-              <img
+              <ProtectedImage
                 src={profile.image}
                 alt={profile.name}
-                referrerPolicy="no-referrer"
                 className="aspect-[4/5] w-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
               />
             </div>

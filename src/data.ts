@@ -1,10 +1,11 @@
 export const profile = {
   name: 'Sunil Paudel',
   role: 'Civil Engineer',
-  location: 'Tokha-11, Kathmandu',
+  location: 'Tokha-11, Kathmandu, Nepal',
   email: 'sunil.paudel3383@gmail.com',
   phone: '+977 9862583383',
-  linkedin: '#', // TODO: replace with your LinkedIn profile URL
+  linkedin: 'https://www.linkedin.com/in/sunil-paudel121/',
+  facebook: 'https://facebook.com/sunil.paudel121',
   image: '/sunil.png',
   summary:
     'Motivated and detail-oriented registered Civil Engineer with a strong academic record and practical experience gained through active involvement in professional organizations and student clubs. Highly proficient in engineering and design software, with a strong ability to adapt to new tools and technologies. Known for strong analytical thinking, effective teamwork, and a readiness to contribute to real-world engineering challenges.',
@@ -151,6 +152,8 @@ export const skills = {
   Technical: [
     'AutoCAD',
     'ETABS',
+    'RISA 3D',
+    'Python',
     'OpenSees',
     'Arc-GIS',
     'Advanced Excel with VBA',
@@ -168,6 +171,90 @@ export const skills = {
     'English — Fluent',
     'Hindi — Conversational',
   ],
+}
+
+export interface TechnicalSkillDetail {
+  name: string
+  category: string
+  level: string
+  score: number
+  maxScore: number
+  description: string
+}
+
+export const technicalSkillDetails: Record<string, TechnicalSkillDetail> = {
+  AutoCAD: {
+    name: 'AutoCAD',
+    category: 'Drafting & 2D/3D Design',
+    level: 'Advanced',
+    score: 8,
+    maxScore: 10,
+    description:
+      'Structural drafting, detailing of bridge components, general arrangement (GA) drawings, and municipal plan preparation.',
+  },
+  ETABS: {
+    name: 'ETABS',
+    category: 'Structural Analysis & Design',
+    level: 'Proficient',
+    score: 6,
+    maxScore: 10,
+    description:
+      '3D building structural modeling, dynamic & seismic response spectrum analysis, non-linear time history analysis, and frame design.',
+  },
+  'RISA 3D': {
+    name: 'RISA 3D',
+    category: 'Structural Analysis & Design',
+    level: 'Intermediate',
+    score: 4,
+    maxScore: 10,
+    description:
+      'Basic structural analysis and design of 3D frame systems, trusses, and individual structural elements.',
+  },
+  Python: {
+    name: 'Python',
+    category: 'Programming & Engineering Analytics',
+    level: 'Intermediate',
+    score: 4,
+    maxScore: 10,
+    description:
+      'Engineering data visualization, scientific plotting, optimization models, with proficiency in Seaborn and PuLP libraries.',
+  },
+  OpenSees: {
+    name: 'OpenSees',
+    category: 'Analysis & Research',
+    level: 'Proficient',
+    score: 8,
+    maxScore: 10,
+    description:
+      'Non-linear structural response analysis & finite element framework research for earthquake engineering.',
+  },
+  'Arc-GIS': {
+    name: 'Arc-GIS',
+    category: 'GIS & Spatial Mapping',
+    level: 'Proficient',
+    score: 8,
+    maxScore: 10,
+    description:
+      'Spatial analysis, municipal road network mapping, catchment area delineation, and topographic data visualization.',
+  },
+  'Advanced Excel with VBA': {
+    name: 'Advanced Excel with VBA',
+    category: 'Data Analysis & Automation',
+    level: 'Proficient',
+    score: 7,
+    maxScore: 10,
+    description:
+      'Automated bridge design spreadsheets, engineering calculation templates, macro routines, and custom VBA scripting.',
+  },
+  'Microsoft Office': {
+    name: 'Microsoft Office',
+    category: 'Documentation & Reporting',
+    level: 'Expert',
+    score: 9,
+    maxScore: 10,
+    description:
+      'Preparation of detailed engineering project reports, survey summaries, technical presentations, and documentation.',
+  },
 }
 
 export const publications = [
