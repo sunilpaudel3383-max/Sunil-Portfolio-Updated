@@ -115,12 +115,12 @@ export const projects: ProjectItem[] = [
     tag: 'Inter-College Model Competition',
     images: [
       {
-        url: '/assets/tensegrity-bridge.jpg',
+        url: '/tensegrity bridge.jpeg',
         caption: 'Scaled Tensegrity Bridge Structural Model',
         alt: 'Scaled tensegrity bridge model built for the competition',
       },
       {
-        url: '/tensegrity-team.jpg',
+        url: '/tensegrity team.jpeg',
         caption: 'Tensegrity Model Design & Competition Team',
         alt: 'Tensegrity Bridge Project Team',
       },
@@ -186,7 +186,7 @@ export const publications = [
     href: '',
     year: '2025',
     type: 'Reference Manual',
-    image: '/assets/concrete-technology.jpg',
+    image: '/Concrete Technology.jpeg',
   },
   {
     title: 'A Refreshers Manual on Engineering Hydrology',
@@ -194,7 +194,7 @@ export const publications = [
     href: '',
     year: '2026',
     type: 'Reference Manual',
-    image: '/assets/engineering-hydrology.jpg',
+    image: '/Engineering Hydrology.JPG',
   },
 ]
 
@@ -261,7 +261,7 @@ export const certificatesData: Certificate[] = [
   {
     id: 'cert-01',
     title: 'Concrete Technology Training & Mix Verification',
-    image: '/assets/concrete-technology.jpg',
+    image: '/Concrete Technology.jpeg',
     caption: 'Hands-on certification in concrete technology, non-destructive testing, and high-performance mix design.',
     issuer: 'Nepal Concrete Institute / IOE',
     date: '2023',
@@ -269,7 +269,7 @@ export const certificatesData: Certificate[] = [
   {
     id: 'cert-02',
     title: 'Engineering Hydrology & Water Resources Modeling',
-    image: '/assets/engineering-hydrology.jpg',
+    image: '/Engineering Hydrology.JPG',
     caption: 'Specialized training in hydro-meteorological data analysis, flood frequency estimation, and hydraulic modeling.',
     issuer: 'Department of Hydrology & Meteorology',
     date: '2024',
@@ -277,7 +277,7 @@ export const certificatesData: Certificate[] = [
   {
     id: 'cert-03',
     title: 'Journal of Innovation & Engineering Research',
-    image: '/assets/journal-innovation.png',
+    image: '/jiee.png',
     caption: 'Publication and recognition certificate for applied research in structural engineering and sustainable materials.',
     issuer: 'Journal of Innovation in Civil Engineering',
     date: '2024',
@@ -285,7 +285,7 @@ export const certificatesData: Certificate[] = [
   {
     id: 'cert-04',
     title: 'Tensegrity Bridge Design & Analysis Workshop',
-    image: '/assets/tensegrity-bridge.jpg',
+    image: '/tensegrity bridge.jpeg',
     caption: 'Certificate of completion for innovative cable-stayed and tensegrity structural model analysis.',
     issuer: 'CESS Thapathali Campus / Engineering Fest',
     date: '2024',
@@ -293,7 +293,7 @@ export const certificatesData: Certificate[] = [
   {
     id: 'cert-05',
     title: 'Girder Bridge Engineering & Substructure Analysis',
-    image: '/assets/girder-bridge.jpg',
+    image: '/bridge GA.png',
     caption: 'Certificate of excellence in RC T-girder bridge design, pier reinforcement, and load rating calculations.',
     issuer: 'Bridge Engineering Association',
     date: '2024',
@@ -301,7 +301,7 @@ export const certificatesData: Certificate[] = [
   {
     id: 'cert-06',
     title: 'Topographic Field Survey & GIS Mapping Certificate',
-    image: '/assets/img5981.jpg',
+    image: '/members.jpg',
     caption: 'Fieldwork credential for municipal transport survey, GPS data collection, and contour profiling.',
     issuer: 'Godawari Municipality / IOE',
     date: '2026',
@@ -309,7 +309,7 @@ export const certificatesData: Certificate[] = [
   {
     id: 'cert-07',
     title: 'Advanced Structural Analysis & ETABS Workshop',
-    image: '/assets/img6079.jpg',
+    image: '/box girder.webp',
     caption: 'Mastery credential in 3D seismic modeling, dynamic analysis, and IS code compliance.',
     issuer: 'Civil Engineering Student’s Society',
     date: '2024',
@@ -317,7 +317,7 @@ export const certificatesData: Certificate[] = [
   {
     id: 'cert-08',
     title: 'Registered Civil Engineer Official License',
-    image: '/assets/img-1c20.jpg',
+    image: '/NEA.jpeg',
     caption: 'Official NEC License (No. 93806) granting professional engineer authorization in Nepal.',
     issuer: 'Nepal Engineering Council',
     date: '2025',
@@ -333,7 +333,7 @@ export const certificatesData: Certificate[] = [
   {
     id: 'cert-10',
     title: '10-Day Advanced Excel & VBA Course for Engineers',
-    image: '/Advanced Excel Course.jpg',
+    image: '/Microsoft Package.jpg',
     caption: 'Certificate of completion for 10-day intensive training in Advanced Excel, functions, data modeling, and VBA macros.',
     issuer: 'CESS, Thapathali Campus',
     date: '2024',
@@ -357,7 +357,7 @@ export const certificatesData: Certificate[] = [
   {
     id: 'cert-13',
     title: 'Certificate of Appreciation — Workshop Facilitator',
-    image: '/CESS Facilitator.jpg',
+    image: '/CESS Facilitator-1.jpg',
     caption: 'Awarded in recognition of excellent work as Facilitator for software and academic workshops during 2024-2025.',
     issuer: 'CESS, Thapathali Campus',
     date: '2024 – 2025',
@@ -365,7 +365,7 @@ export const certificatesData: Certificate[] = [
   {
     id: 'cert-14',
     title: 'Technical Article Author — Civil Transcend Journal',
-    image: '/Civil Transcend Article.jpg',
+    image: '/CESS Facilitator-1.jpg',
     caption: 'Recognition for publishing research article on "Sustainable Urban Drainage Systems (SuDS) for Flood Control in Urban Areas".',
     issuer: 'Civil Transcend / CESS Thapathali Campus',
     date: '2024',
@@ -373,7 +373,7 @@ export const certificatesData: Certificate[] = [
   {
     id: 'cert-15',
     title: 'Editorial Board Member & Editor — Civil Transcend Issue III',
-    image: '/Civil Transcend Editor.jpg',
+    image: '/CESS Facilitator-1.jpg',
     caption: 'Certificate of appreciation bestowed in honor of excellent work as Editor for Civil Transcend Issue III.',
     issuer: 'Civil Transcend / CESS Thapathali Campus',
     date: '2024 – 2025',
@@ -381,7 +381,7 @@ export const certificatesData: Certificate[] = [
   {
     id: 'cert-16',
     title: '1st Position — Secondary Level Essay Writing Competition',
-    image: '/First- Nepali Essay(Secondary).jpg',
+    image: '/NEA.jpeg',
     caption: 'First prize winner in competitive essay writing on socio-environmental development and engineering perspectives.',
     issuer: 'Secondary School Academic Committee',
     date: '2020',
@@ -389,7 +389,7 @@ export const certificatesData: Certificate[] = [
   {
     id: 'cert-17',
     title: '1st Position — Tokha Municipality Speech Competition',
-    image: '/First- Speech Competition Tokha.jpg',
+    image: '/NEA.jpeg',
     caption: 'First position award in municipal public speaking and oratory competition organized by Tokha Municipality.',
     issuer: 'Tokha Municipality Academic Committee',
     date: '2020',
@@ -397,7 +397,7 @@ export const certificatesData: Certificate[] = [
   {
     id: 'cert-18',
     title: '3rd Position — Quiz Contest (UTSARGA National Fest)',
-    image: '/Third-Quiz.jpg',
+    image: '/CESS Facilitator-1.jpg',
     caption: 'Merit award for securing 3rd position in the Quiz Contest under UTSARGA organized by CESS & ASIS Thapathali Campus.',
     issuer: 'CESS & ASIS, Thapathali Campus',
     date: '2023',
@@ -405,7 +405,7 @@ export const certificatesData: Certificate[] = [
   {
     id: 'cert-19',
     title: 'Certificate of Appreciation — Event Support & Volunteering',
-    image: '/Volunteer.jpg',
+    image: '/members.jpg',
     caption: 'Awarded for notable support and praiseworthy contribution to Parents Day and School Fete events.',
     issuer: 'Fluorescent School',
     date: '2018',
@@ -432,7 +432,7 @@ export const trainingsAndWorkshops = {
       id: 'attended-3',
       title: 'Advanced Excel Course with VBA',
       org: 'Organized by CESS, Thapathali Campus',
-      certificate: '/Advanced Excel Course.jpg',
+      certificate: '/Microsoft Package.jpg',
       certificateName: 'Advanced Excel Course',
     },
     {
