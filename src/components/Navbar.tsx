@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react'
-import { Menu, X, Sun, Moon } from 'lucide-react'
+import { Menu, X, Sun, Moon, FileText } from 'lucide-react'
 import { navLinks, profile } from '../data'
 import { useTheme } from '../ThemeContext'
+import { CV_ROUTE } from '../cv/route'
 
 export default function Navbar() {
   const [open, setOpen] = useState(false)
@@ -39,6 +40,14 @@ export default function Navbar() {
         </div>
 
         <div className="flex items-center gap-3">
+          <a
+            href={CV_ROUTE}
+            className="inline-flex items-center gap-1.5 rounded-lg border border-sky-500/40 bg-sky-500/10 px-3 py-2 text-sm font-medium text-sky-600 transition-colors hover:bg-sky-500/20 dark:text-sky-400 lg:px-4"
+          >
+            <FileText size={15} />
+            <span className="hidden sm:inline">Create CV</span>
+          </a>
+
           {/* Theme Toggle Button */}
           <button
             onClick={toggleTheme}
@@ -83,6 +92,14 @@ export default function Navbar() {
               {link.label}
             </a>
           ))}
+          <a
+            href={CV_ROUTE}
+            onClick={() => setOpen(false)}
+            className="mt-2 inline-flex items-center justify-center gap-1.5 rounded-lg border border-sky-500/40 bg-sky-500/10 px-6 py-2 text-center text-sm font-medium text-sky-600 dark:text-sky-400"
+          >
+            <FileText size={15} />
+            Create CV
+          </a>
           <a
             href="#contact"
             onClick={() => setOpen(false)}

@@ -1,0 +1,330 @@
+/*
+ * Styling for the generated CV document.
+ *
+ * Everything here is scoped to .cv-doc so the portfolio's own theme (and its
+ * dark mode) never leaks into the paper — a CV is always black-on-white.
+ * Sizes are in pt/mm so that what shows on screen matches the printed A4 sheet.
+ */
+
+.cv-doc {
+  --cv-link: #2a4b8d;
+  --cv-rule: #26364d;
+
+  font-family: 'Latin Modern Roman', 'CMU Serif', 'Source Serif 4', ui-serif,
+    Georgia, 'Times New Roman', serif;
+  font-size: 10pt;
+  line-height: 1.3;
+  color: #000;
+  background: #fff;
+  text-align: left;
+  -webkit-font-smoothing: antialiased;
+}
+
+.cv-doc * {
+  box-sizing: border-box;
+}
+
+/* The A4 sheet itself. Screen padding matches the @page margins used in print. */
+.cv-paper {
+  width: 210mm;
+  min-height: 297mm;
+  padding: 14mm 15mm;
+  background: #fff;
+  margin: 0 auto;
+}
+
+/*
+ * Faint guide showing where each printed page will break. The stripes are
+ * offset by the 14mm top padding and not tiled above it, so the first line
+ * lands exactly where the first printed page runs out of room.
+ */
+.cv-pages {
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent 0,
+    transparent calc(269mm - 1px),
+    rgba(148, 163, 184, 0.55) calc(269mm - 1px),
+    rgba(148, 163, 184, 0.55) 269mm
+  );
+  background-repeat: no-repeat;
+  background-position: 0 14mm;
+  background-size: 100% calc(100% - 14mm);
+}
+
+/* ---------- Header ---------- */
+
+.cv-name {
+  font-size: 26pt;
+  font-weight: 400;
+  text-align: center;
+  line-height: 1.1;
+  margin: 0 0 2mm;
+  letter-spacing: 0.01em;
+}
+
+.cv-contact {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0 1.5mm;
+  font-size: 9.5pt;
+  margin-bottom: 1mm;
+}
+
+.cv-contact-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 1mm;
+  color: var(--cv-link);
+  text-decoration: none;
+}
+
+.cv-contact-item svg {
+  width: 9pt;
+  height: 9pt;
+  flex-shrink: 0;
+}
+
+.cv-contact-sep {
+  color: #000;
+}
+
+/* ---------- Section headings ---------- */
+
+.cv-section {
+  margin-top: 3.5mm;
+}
+
+.cv-section-title {
+  font-variant-caps: small-caps;
+  font-feature-settings: 'smcp' 1;
+  font-size: 12.5pt;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  margin: 0 0 0.6mm;
+  padding: 0;
+  line-height: 1.15;
+}
+
+.cv-rule {
+  border: 0;
+  border-top: 0.6pt solid var(--cv-rule);
+  margin: 0 0 1.6mm;
+}
+
+/* ---------- Summary ---------- */
+
+.cv-summary {
+  margin: 0;
+  text-align: justify;
+  hyphens: auto;
+}
+
+/* ---------- Education ---------- */
+
+.cv-edu-row {
+  display: grid;
+  grid-template-columns: 22mm 1fr;
+  column-gap: 2mm;
+  margin-bottom: 0.8mm;
+}
+
+.cv-edu-period {
+  white-space: nowrap;
+}
+
+.cv-edu-inst {
+  font-weight: 700;
+}
+
+/* ---------- Entries (experience / projects / non-academic) ---------- */
+
+.cv-entry {
+  margin-bottom: 2.4mm;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+.cv-entry-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 4mm;
+  margin-bottom: 0.8mm;
+}
+
+.cv-entry-title {
+  font-weight: 700;
+  font-size: 10.5pt;
+}
+
+.cv-entry-meta {
+  text-align: right;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.cv-bullets {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * A grid rather than CSS columns: the LaTeX original fills two-column bullets
+ * left-to-right (items 1 and 2 share the first row), which is row order, while
+ * column-count would stack 1 and 2 down the left column instead.
+ */
+.cv-bullets.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 6mm;
+}
+
+.cv-bullets li {
+  position: relative;
+  padding-left: 4mm;
+  margin-bottom: 0.4mm;
+  text-align: justify;
+  break-inside: avoid;
+}
+
+.cv-bullets li::before {
+  content: '•';
+  position: absolute;
+  left: 0.8mm;
+  top: 0;
+}
+
+/* ---------- Publications ---------- */
+
+/* Tailwind's preflight strips list markers, so the numbering is restored here. */
+.cv-pubs {
+  margin: 0;
+  padding-left: 8mm;
+  font-size: 9.5pt;
+  list-style: decimal outside;
+}
+
+.cv-pubs li {
+  margin-bottom: 1.4mm;
+  text-align: justify;
+  break-inside: avoid;
+}
+
+.cv-pub-title {
+  font-style: italic;
+}
+
+/* ---------- Skills / Languages ---------- */
+
+.cv-skills-head {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 6mm;
+}
+
+.cv-skills-head .cv-section-title {
+  text-align: center;
+}
+
+.cv-skills-body {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0 6mm;
+  align-items: start;
+}
+
+.cv-skills-sub {
+  font-weight: 700;
+  margin-bottom: 1mm;
+}
+
+.cv-skill-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.cv-skill-list li {
+  position: relative;
+  padding-left: 4mm;
+  margin-bottom: 0.4mm;
+}
+
+.cv-skill-list li::before {
+  content: '•';
+  position: absolute;
+  left: 0.8mm;
+  top: 0;
+}
+
+/* ---------- References ---------- */
+
+.cv-ref {
+  margin-bottom: 1.2mm;
+  text-align: justify;
+}
+
+.cv-ref-name {
+  font-weight: 700;
+}
+
+/* ---------- Printing ---------- */
+
+/*
+ * The document is rendered twice: once inside the builder as a scaled preview,
+ * and once into a hidden portal at the end of <body>. Printing hides the app and
+ * shows only the portal copy, which sits outside any CSS transform so the sheet
+ * lands on the page at true A4 size.
+ */
+.cv-print-portal {
+  display: none;
+}
+
+@media print {
+  /*
+   * Only the vertical margins come from @page, because top/bottom space has to
+   * be re-applied on every sheet. The left/right margins are padding on the
+   * paper instead: a block's horizontal padding is honoured on every page
+   * fragment, so the text can never end up flush against the paper edge even
+   * where the @page margin is overridden (print dialog set to "None", or a
+   * headless renderer supplying its own margins).
+   */
+  @page {
+    size: A4;
+    margin: 14mm 0;
+  }
+
+  html,
+  body {
+    background: #fff !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  #root {
+    display: none !important;
+  }
+
+  .cv-print-portal {
+    display: block !important;
+  }
+
+  .cv-print-portal .cv-paper {
+    width: auto;
+    min-height: 0;
+    padding: 0 15mm;
+    margin: 0;
+  }
+
+  .cv-doc {
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+
+  .cv-pages {
+    background-image: none;
+  }
+}
