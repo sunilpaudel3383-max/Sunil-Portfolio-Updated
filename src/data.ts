@@ -5,7 +5,7 @@ export const profile = {
   email: 'sunil.paudel3383@gmail.com',
   phone: '+977 9862583383',
   linkedin: 'https://www.linkedin.com/in/sunil-paudel121/',
-  facebook: 'https://facebook.com/sunil.paudel121',
+  facebook: 'https://facebook.com/sunil.paudel.10809',
   image: '/sunil.png',
   summary:
     'Motivated and detail-oriented registered Civil Engineer with a strong academic record and practical experience gained through active involvement in professional organizations and student clubs. Highly proficient in engineering and design software, with a strong ability to adapt to new tools and technologies. Known for strong analytical thinking, effective teamwork, and a readiness to contribute to real-world engineering challenges.',
